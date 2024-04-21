@@ -64,14 +64,14 @@ async function run() {
         res.send(result);
     });
     
-    app.get('/bookings', async(req, res)=>{
-      let query  = {};
-      if(req.query.email){
-        query = {email: req.query?.email};
-      }
-      const result = await bookingCollection.find(query).toArray();
-      res.send(result);
-    })
+    // app.get('/bookings', async(req, res)=>{
+    //   let query  = {};
+    //   if(req.query.email){
+    //     query = {email: req.query?.email};
+    //   }
+    //   const result = await bookingCollection.find(query).toArray();
+    //   res.send(result);
+    // })
     app.post('/bookings', async(req, res)=>{
         const booking = req.body;
         console.log(booking);
