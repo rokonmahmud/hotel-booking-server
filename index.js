@@ -51,12 +51,12 @@ async function run() {
     })
 
     //services related api
-    app.get('/rooms', async(req, res)=>{
-        const coursor = servicesCollection.find();
-        const result = await coursor.toArray();
-        res.send(result);
+    // app.get('/rooms', async(req, res)=>{
+    //     const coursor = servicesCollection.find();
+    //     const result = await coursor.toArray();
+    //     res.send(result);
 
-    });
+    // });
     app.get('/rooms/:id', async(req, res)=>{
         const id = req.params.id;
         const query = {_id: new ObjectId(id)}
