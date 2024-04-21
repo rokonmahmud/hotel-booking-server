@@ -34,7 +34,7 @@ async function run() {
 
 
     const servicesCollection = client.db('hotelBooking').collection('roomServices');
-    // const bookingCollection = client.db('hotelBooking').collection('bookingRooms');
+    const bookingCollection = client.db('hotelBooking').collection('bookingRooms');
 
     //auth related api
     app.post('/jwt', async(req, res) => {
